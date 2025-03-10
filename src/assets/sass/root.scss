@@ -8,13 +8,31 @@
 @media only screen and (min-width: 0rem) {
     // Website colors
     :root {
-        --primary: #ffba19;
-        --primaryLight: #ffd675;
-        --secondary: #001f3f;
-        --secondaryLight: #001f3f;
-        --headerColor: #1a1a1a;
+        --primary: #388443;
+        --primaryDark: #2c6a34;
+        --primaryOpaque: rgba(56, 132, 67, 0.2);
+        --secondary: #bea57d;
+        --secondaryDark: #9b8a64;
+        --secondaryOpaque: rgba(190, 165, 125, 0.2);
+        --tertiary: #7ec4cf;
+        --tertiaryDark: #639ea7;
+        --tertiaryOpaque: rgba(126, 196, 207, 0.2);
+
+        --headerColor: #242424;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
+        --light: #f0f0f0;
+        --lighter: #f7f7f7;
+        --white: #ffffff;
+        --grayLightest: #e8e8e8;
+        --grayLighter: #ebebeb;
+        --grayLight: #888888;
+        --gray: #4f4f4f;
+        --grayDark: #27272a;
+        --shadow: 12px 12px 24px -0px rgba(26, 26, 26, 0.08);
+        --shadowLg: 10px 18px 37px 0px rgba(0, 0, 0, 0.75);
+        --borderRoundedSm: 0.25rem;
+        --borderRounded: 0.5rem;
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
