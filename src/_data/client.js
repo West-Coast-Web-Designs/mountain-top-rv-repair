@@ -1,16 +1,11 @@
 module.exports = {
-    name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
-    phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
-    address: {
-        lineOne: "First Address Line",
-        lineTwo: "Second Address Line",
-        city: "Denver",
-        state: "CO",
-        zip: "80206",
-        country: "US",
-        mapLink: "https://goo.gl/maps/UAQn4vuGDiwv7DV39",
+    name: "Mountain Top Mobile RV Repair",
+    email: "mtmrvr@gmail.com",
+    phoneForTel: "503-593-6530",
+    phoneFormatted: "(503) 593-6530",
+    location: {
+        city: "Portland",
+        state: "Oregon",
     },
     socials: {
         facebook: "https://www.facebook.com/",
