@@ -313,89 +313,192 @@ eleventyNavigation:
     </section>
 
     <!-- ============================================ -->
-    <!--                 Side By Side                 -->
+    <!--                Side By Side                  -->
     <!-- ============================================ -->
 
-    <section id="sbs">
+    <section id="sbs-1982">
         <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/cabinets2-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/cabinets2.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/cabinets2.jpg"
-                        alt="cabinets"
-                        loading="lazy"
-                        width="400"
-                        height="563"
-                    />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="/assets/images/construction-m.jpg"
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="/assets/images/construction.jpg"
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="/assets/images/construction.jpg"
-                        alt="house"
-                        loading="lazy"
-                        width="400"
-                        height="563"
-                    />
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
+            <div class="cs-content">
                 <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
+                <h2 class="cs-title">About Mountain Top Mobile RV Repair</h2>
+                <p class="cs-text-large">
+                    At <b>Mountain Top Mobile RV Repair</b>, we bring 20+ years
+                    of RV industry experience directly to you. As your trusted
+                    local RV experts, we provide timely and professional service
+                    throughout the
+                    <b>Greater Portland Metro area and beyond.</b>
                 </p>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent
-                    Class officelan nonatoureanor mauris laoreet, iaculis libero
-                    quis. Curabitur et tempus eri consequat tincidunt turpis sit
-                    amet imperdiet. Praesent nonatourean olei aptent taciti
-                    sociosqu ad litora torquent per.
+                    Whether you need routine maintenance or critical repairs,
+                    you can be confident that your RV is in
+                    <b>skilled hands</b>. Our commitment to quality workmanship
+                    and customer satisfaction ensures that your RV stays
+                    road-ready for every adventure.
                 </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet.
-                        Praesent Classei consequat tincidunt turpis sit amet
-                        imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
+                <a href="" class="cs-button-solid">Get Started</a>
+                <div class="cs-ratings">
+                    <div class="cs-stars">
+                        <img
+                            class="cs-star"
+                            loading="lazy"
+                            decoding="async"
+                            src="/assets/icons/star.svg"
+                            alt="star"
+                            width="24"
+                            height="24"
+                            aria-hidden="true"
+                        />
+                        <img
+                            class="cs-star"
+                            loading="lazy"
+                            decoding="async"
+                            src="/assets/icons/star.svg"
+                            alt="star"
+                            width="24"
+                            height="24"
+                            aria-hidden="true"
+                        />
+                        <img
+                            class="cs-star"
+                            loading="lazy"
+                            decoding="async"
+                            src="/assets/icons/star.svg"
+                            alt="star"
+                            width="24"
+                            height="24"
+                            aria-hidden="true"
+                        />
+                        <img
+                            class="cs-star"
+                            loading="lazy"
+                            decoding="async"
+                            src="/assets/icons/star.svg"
+                            alt="star"
+                            width="24"
+                            height="24"
+                            aria-hidden="true"
+                        />
+                        <img
+                            class="cs-star"
+                            loading="lazy"
+                            decoding="async"
+                            src="/assets/icons/star.svg"
+                            alt="star"
+                            width="24"
+                            height="24"
+                            aria-hidden="true"
+                        />
+                    </div>
+                    <div class="cs-rating">
+                        <h3 class="cs-h3">100% Customer Satisfaction</h3>
+                        <p class="cs-rating-text">
+                            based on reviews of completed projects
+                        </p>
+                    </div>
                     <img
-                        class="cs-quote-icon"
+                        class="cs-icon"
                         loading="lazy"
                         decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                        alt="gavel"
-                        width="136"
-                        height="77"
+                        src="/assets/icons/like.svg"
+                        alt="like"
+                        width="20"
+                        height="20"
                     />
                 </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
+            </div>
+            <div class="cs-image-group">
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width: 576, height: 960  }) | avif %}
+                        "
+                        type="image/avif"
+                    />
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width: 576, height: 960  }) | webp %}
+                        "
+                        type="image/webp"
+                    />
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width: 576, height: 960  }) | jpeg %}
+                        "
+                        type="image/jpeg"
+                    />
+                    <!--Tablet Image-->
+                    <source
+                        media="(max-width: 1024px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width: 908 , height:1360  }) | avif %}
+                        "
+                        type="image/avif"
+                    />
+                    <source
+                        media="(max-width: 1024px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width: 908 , height:1360  }) | webp %}
+                        "
+                        type="image/webp"
+                    />
+                    <source
+                        media="(max-width: 1024px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width: 908 , height:1360  }) | jpeg %}
+                        "
+                        type="image/jpeg"
+                    />
+                    <!--Desktop Image-->
+                    <source
+                        media="(min-width: 1024px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width:1260 , height:1360  }) | avif %}
+                        "
+                        type="image/avif"
+                    />
+                    <source
+                        media="(min-width: 1024px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width:1260 , height:1360  }) | webp %}
+                        "
+                        type="image/webp"
+                    />
+                    <source
+                        media="(min-width: 1024px)"
+                        srcset="
+                            {% getUrl '/assets/images/about-us.jpg' | resize({ width:1260 , height:1360  }) | jpeg %}
+                        "
+                        type="image/jpeg"
+                    />
+                    <img
+                        src="{% getUrl '/assets/images/about-us.jpg' | resize({ width: 1260 , height: 1360  }) | jpeg %}"
+                        alt="RV off road"
+                        width="630"
+                        height="680"
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                    />
+                </picture>
+                <div class="cs-box">
+                    <img
+                        class="cs-box-icon"
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/icons/toolkit.svg"
+                        alt="people"
+                        width="60"
+                        height="60"
+                    />
+                    <div>
+                        <span class="cs-desc"> 250+ </span>
+                        <p class="cs-box-text">RV Services completed</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

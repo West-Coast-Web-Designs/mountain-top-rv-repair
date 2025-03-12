@@ -139,6 +139,7 @@
 @media only screen and (min-width: 0rem) {
   #services-1187 {
     padding: var(--sectionPadding);
+    background-color: var(--white);
   }
   #services-1187 .cs-container {
     max-width: 80rem;
@@ -186,7 +187,7 @@
     margin-bottom: 1.25rem;
     box-sizing: border-box;
     /* prevents border from affecting height and width */
-    background-color: #f7f7f7;
+    background-color: var(--light);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -253,6 +254,9 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #services-1187 {
+    background-color: var(--dark);
+  }
   body.dark-mode #services-1187 .cs-topper {
     color: var(--primaryLight);
   }
@@ -261,7 +265,7 @@
     opacity: 0.8;
   }
   body.dark-mode #services-1187 .cs-picture {
-    background-color: var(--medium);
+    background-color: var(--accent);
   }
   body.dark-mode #services-1187 .cs-icon {
     /* turns it white */

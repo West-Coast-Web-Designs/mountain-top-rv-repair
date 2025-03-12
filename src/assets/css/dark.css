@@ -5,9 +5,9 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   :root {
-    --dark: #082032;
-    --medium: #2c394b;
-    --accent: #334756;
+    --dark: #121212;
+    --medium: #181818;
+    --accent: #282828;
   }
   body.dark-mode {
     background-color: var(--dark);
@@ -29,14 +29,14 @@
     display: block !important;
   }
   body.dark-mode .cs-topper {
-    color: var(--tertiary);
-    background-color: var(--tertiaryOpaque);
+    color: var(--secondary);
+    background-color: var(--secondaryOpaque);
   }
   body.dark-mode .cs-button-solid {
-    background-color: var(--secondary);
+    background-color: var(--tertiary);
   }
   body.dark-mode .cs-button-solid:hover {
-    background-color: var(--secondaryDark);
+    background-color: var(--tertiaryDark);
   }
   .dark {
     display: none;

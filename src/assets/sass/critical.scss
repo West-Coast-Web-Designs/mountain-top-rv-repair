@@ -172,7 +172,7 @@
 @media only screen and (min-width: 0rem) {
     #services-1187 {
         padding: var(--sectionPadding);
-
+        background-color: var(--white);
         .cs-container {
             max-width: calc(1280 / 16 * 1rem);
             width: 100%;
@@ -223,7 +223,7 @@
             margin-bottom: calc(20 / 16 * 1rem);
             box-sizing: border-box;
             /* prevents border from affecting height and width */
-            background-color: #f7f7f7;
+            background-color: var(--light);
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -307,6 +307,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #services-1187 {
+            background-color: var(--dark);
             .cs-topper {
                 color: var(--primaryLight);
             }
@@ -317,7 +318,7 @@
             }
 
             .cs-picture {
-                background-color: var(--medium);
+                background-color: var(--accent);
             }
 
             .cs-icon {
