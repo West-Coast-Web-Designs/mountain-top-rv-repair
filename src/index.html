@@ -511,8 +511,61 @@ eleventyNavigation:
         <div class="cs-container">
             <!-- Left Image Section -->
             <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
+                <picture class="cs-picture ">
+                    <!--Mobile Image-->
                     <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            {% getUrl '/assets/images/why-choose-us.jpg' | resize({ width: 1200, height: 1136  }) | avif %}
+                        "
+                        type="image/avif"
+                    />
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            {% getUrl '/assets/images/why-choose-us.jpg' | resize({ width: 1200, height: 1136  }) | webp %}
+                        "
+                        type="image/webp"
+                    />
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            {% getUrl '/assets/images/why-choose-us.jpg' | resize({ width: 1200, height: 1136  }) | jpeg %}
+                        "
+                        type="image/jpeg"
+                    />
+                    <!--Tablet Image-->
+                    <source
+                        media="(min-width: 601)"
+                        srcset="
+                            {% getUrl '/assets/images/why-choose-us.jpg' | resize({ width: 1000 , height:1458  }) | avif %}
+                        "
+                        type="image/avif"
+                    />
+                    <source
+                        media="(min-width: 601)"
+                        srcset="
+                            {% getUrl '/assets/images/why-choose-us.jpg' | resize({ width: 1000 , height:1458  }) | webp %}
+                        "
+                        type="image/webp"
+                    />
+                    <source
+                        media="(min-width: 601)"
+                        srcset="
+                            {% getUrl '/assets/images/why-choose-us.jpg' | resize({ width: 1000 , height:1458  }) | jpeg %}
+                        "
+                        type="image/jpeg"
+                    />
+                    <img
+                        src="{% getUrl '/assets/images/why-choose-us.jpg' | resize({ width: 500 , height: 729  }) | jpeg %}"
+                        alt="RV camping"
+                        width="500"
+                        height="729"
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                    />
+                    {# <source
                         media="(max-width: 600px)"
                         srcset="
                             https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine1.jpg
@@ -532,7 +585,7 @@ eleventyNavigation:
                         width="500"
                         height="729"
                         aria-hidden="true"
-                    />
+                    /> #}
                 </picture>
             </div>
             <!-- Right Content Section-->
@@ -715,28 +768,6 @@ eleventyNavigation:
                 decoding="async"
                 aria-hidden="true"
             />
-            <!--Mobile Image-->
-            {# <source
-                media="(max-width: 600px)"
-                srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine2.png
-                "
-            />
-            <!--Tablet and above Image-->
-            <source
-                media="(min-width: 601px)"
-                srcset="
-                    https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine2.png
-                "
-            />
-            <img
-                loading="lazy"
-                decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine2.png"
-                alt="turbine"
-                width="1280"
-                height="568"
-            /> #}
         </picture>
     </section>
 

@@ -308,18 +308,21 @@
     color: var(--bodyTextColor);
   }
   #sbsr-1457 .cs-image-group {
-    /* scaling the font size with the view width, removed at desktop */
-    font-size: min(2.23vw, 0.83em);
-    /* using ems so we can use font size to scale the whole section */
-    width: 40.625em;
-    height: 45.5625em;
+    width: 100%;
+    max-width: 39.375rem;
+    /* Changes to auto at desktop */
+    height: 30rem;
+    /* clips the corners of the children around the border radius */
+    overflow: hidden;
+    border-radius: 1rem;
+    order: -1;
     position: relative;
   }
   #sbsr-1457 .cs-picture {
-    border-radius: 1.5em;
-    /* clips img tag corners */
-    overflow: hidden;
-    position: absolute;
+    width: 100%;
+    max-height: 800px;
+    /* makes it cover the parent dimensions */
+    object-fit: cover;
     display: block;
   }
   #sbsr-1457 .cs-picture img {
@@ -330,18 +333,6 @@
     width: 100%;
     /* makes image act like a background image */
     object-fit: cover;
-  }
-  #sbsr-1457 .cs-picture1 {
-    width: 32.625em;
-    height: 45.5625em;
-    right: 0;
-    top: 0;
-  }
-  #sbsr-1457 .cs-picture2 {
-    width: 23.625em;
-    height: 28.75em;
-    left: 0;
-    bottom: 6.25em;
   }
   #sbsr-1457 .cs-background {
     width: 100%;
