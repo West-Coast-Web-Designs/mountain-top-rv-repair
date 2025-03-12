@@ -257,6 +257,7 @@
     width: 100%;
     max-width: 39.375rem;
     margin: 0;
+    margin-bottom: 1rem;
     padding: 0;
     display: flex;
     align-items: flex-start;
@@ -288,7 +289,7 @@
   }
   #sbsr-1457 #list-1186 .cs-li-icon {
     /* 24px - 32px */
-    width: clamp(1.5rem, 3vw, 2rem);
+    width: 1.875rem;
     height: auto;
     display: block;
   }
