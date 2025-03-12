@@ -78,110 +78,237 @@ eleventyNavigation:
     <!--                    Hero                      -->
     <!-- ============================================ -->
 
-    <section id="hero">
+    <section id="hero-1950">
         <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum
-                    varius. Nibh tortor id aliquet lectus proin nibh
-                    condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                        class="cs-img"
-                        loading="lazy"
-                        decoding="async"
-                        src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                        alt="play icon"
-                        width="17"
-                        height="17"
-                    />
-                    Get in Touch
-                </a>
+            <div class="cs-content">
+                <h1 class="cs-title">
+                    Portland Oregon On-Site RV Repair Service
+                </h1>
+                <div class="cs-flex-group">
+                    <p class="cs-text">
+                        Serving the Greater Portland Metro area with expert
+                        on-site repairs and 20+ years of experience.
+                    </p>
+                    <a href="" class="cs-button-solid">Read More</a>
+                </div>
             </div>
         </div>
 
-        <!-- Background Image -->
-        <picture class="cs-picture">
+        <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+        <picture class="cs-background">
+            <!--Mobile Image-->
             <source
                 media="(max-width: 600px)"
-                srcset="/assets/images/landing-m.webp"
+                srcset="
+                    {% getUrl '/assets/images/hero.jpg' | resize({ width: 640, height: 1500, position: 'attention' }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/hero.jpg' | resize({ width: 640, height: 1500, position: 'attention' }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/hero.jpg' | resize({ width: 640, height: 1500, position: 'attention' }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Tablet Image-->
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl '/assets/images/hero.jpg' | resize({ width: 2250, height: 1500, position: 'attention' }) | avif %}
+                "
+                type="image/avif"
             />
             <source
                 media="(min-width: 601px)"
-                srcset="/assets/images/landing.jpg"
+                srcset="
+                    {% getUrl '/assets/images/hero.jpg' | resize({ width: 2250, height: 1500, position: 'attention' }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    {% getUrl '/assets/images/hero.jpg' | resize({ width: 2250, height: 1500, position: 'attention' }) | jpeg %}
+                "
+                type="image/jpeg"
             />
             <img
-                aria-hidden="true"
+                src="{% getUrl '/assets/images/hero.jpg' | resize({ width: 2250, height: 1500, position: 'attention' }) | jpeg %}"
+                alt="traveling rv"
+                width="2250"
+                height="1500"
                 decoding="async"
-                src="/assets/images/landing.jpg"
-                alt="new home"
-                width="2500"
-                height="1667"
-                loading="eager"
+                aria-hidden="true"
             />
         </picture>
     </section>
 
     <!-- ============================================ -->
-    <!--                  Services                    -->
+    <!--                   Services                   -->
     <!-- ============================================ -->
-
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service1.svg"
-                    alt="appliance"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>Service 1</h2>
-            <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-            </p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service2.svg"
-                    alt="appliance"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>Service 2</h2>
-            <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-            </p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                    aria-hidden="true"
-                    decoding="async"
-                    src="/assets/svgs/service3.svg"
-                    alt="appliance"
-                    width="48"
-                    height="48"
-                />
-            </picture>
-            <h2>Service 3</h2>
-            <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-            </p>
+    <section id="services-1187">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Other services</span>
+                <h2 class="cs-title">
+                    We Provide Quality Auto Repair Services
+                </h2>
+                <p class="cs-text">
+                    Facilisis condimentum viverra scelerisque ac morbi sit sed.
+                    Turpis sagittis in blandit eleifend tortor ullamcorper eu
+                    placerat. Et orci felis volutpat, etiam vitae egestas
+                    volutpat pulvinar.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img
+                            class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/engineering%201%20red.svg"
+                            loading="lazy"
+                            decoding="async"
+                            alt="icon"
+                            width="33"
+                            height="38"
+                            aria-hidden="true"
+                        />
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Check Engine Light</h3>
+                        <p class="cs-item-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img
+                            class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/brake-red.svg"
+                            loading="lazy"
+                            decoding="async"
+                            alt="icon"
+                            width="33"
+                            height="38"
+                            aria-hidden="true"
+                        />
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Brake Repair Service</h3>
+                        <p class="cs-item-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img
+                            class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/air-conditioner-red.svg"
+                            loading="lazy"
+                            decoding="async"
+                            alt="icon"
+                            width="33"
+                            height="38"
+                            aria-hidden="true"
+                        />
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">AC Repair Service</h3>
+                        <p class="cs-item-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img
+                            class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/motor%201%20red.svg"
+                            loading="lazy"
+                            decoding="async"
+                            alt="icon"
+                            width="33"
+                            height="38"
+                            aria-hidden="true"
+                        />
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Oil Filter Change</h3>
+                        <p class="cs-item-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img
+                            class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/alloy-wheel-red.svg"
+                            loading="lazy"
+                            decoding="async"
+                            alt="icon"
+                            width="33"
+                            height="38"
+                            aria-hidden="true"
+                        />
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Changing Wheel</h3>
+                        <p class="cs-item-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img
+                            class="cs-icon"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/contamination-red.svg"
+                            loading="lazy"
+                            decoding="async"
+                            alt="icon"
+                            width="33"
+                            height="38"
+                            aria-hidden="true"
+                        />
+                    </picture>
+                    <!-- Text Grouped For Flexbox-->
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Emissions Repair</h3>
+                        <p class="cs-item-text">
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">Book Appointment</a>
         </div>
     </section>
 
