@@ -257,9 +257,6 @@
   body.dark-mode #services-1187 {
     background-color: var(--dark);
   }
-  body.dark-mode #services-1187 .cs-topper {
-    color: var(--primaryLight);
-  }
   body.dark-mode #services-1187 .cs-text,
   body.dark-mode #services-1187 .cs-item-text {
     opacity: 0.8;
