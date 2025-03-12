@@ -666,6 +666,59 @@ eleventyNavigation:
             <source
                 media="(max-width: 600px)"
                 srcset="
+                    {% getUrl '/assets/images/why-choose-us-bg.jpg' | resize({ width: 1200, height: 1136  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/why-choose-us-bg.jpg' | resize({ width: 1200, height: 1136  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    {% getUrl '/assets/images/why-choose-us-bg.jpg' | resize({ width: 1200, height: 1136  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <!--Tablet Image-->
+            <source
+                media="(min-width: 601)"
+                srcset="
+                    {% getUrl '/assets/images/why-choose-us-bg.jpg' | resize({ width: 2560 , height:1136  }) | avif %}
+                "
+                type="image/avif"
+            />
+            <source
+                media="(min-width: 601)"
+                srcset="
+                    {% getUrl '/assets/images/why-choose-us-bg.jpg' | resize({ width: 2560 , height:1136  }) | webp %}
+                "
+                type="image/webp"
+            />
+            <source
+                media="(min-width: 601)"
+                srcset="
+                    {% getUrl '/assets/images/why-choose-us-bg.jpg' | resize({ width: 2560 , height:1136  }) | jpeg %}
+                "
+                type="image/jpeg"
+            />
+            <img
+                src="{% getUrl '/assets/images/why-choose-us-bg.jpg' | resize({ width: 1280 , height: 568  }) | jpeg %}"
+                alt="RV in the mountains"
+                width="1280"
+                height="568"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+            />
+            <!--Mobile Image-->
+            {# <source
+                media="(max-width: 600px)"
+                srcset="
                     https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine2.png
                 "
             />
@@ -683,7 +736,7 @@ eleventyNavigation:
                 alt="turbine"
                 width="1280"
                 height="568"
-            />
+            /> #}
         </picture>
     </section>
 
