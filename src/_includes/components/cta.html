@@ -5,31 +5,66 @@
 <section id="cta">
     <div class="container">
         <h2 class="title">
-            Get It Done
+            Get Expert Mobile RV Repair
             <br />
-            With Us Today
+            We Come to You!
         </h2>
         <p>
-            Say something catchy, informative, and encouraging to click the
-            button to go to the contact page. I like to add these to the bottom
-            of all pages.
+            Fast, reliable on-site RV repairs with 20+ years of experience.
+            Whether it’s maintenance or emergency service, we’ve got you
+            covered. Call now to schedule!
         </p>
         <a href="/contact" class="cs-button-solid">Get an Estimate Now</a>
     </div>
     <picture>
         <source
             media="(max-width: 600px)"
-            srcset="/assets/images/cabinets2-m.jpg"
+            srcset="
+                {% getUrl '/assets/images/cta-image.avif' | resize({ width: 1200, height: 772, position: 'attention' }) | avif %}
+            "
+            type="image/avif"
+        />
+        <source
+            media="(max-width: 600px)"
+            srcset="
+                {% getUrl '/assets/images/cta-image.avif' | resize({ width: 1200, height: 772, position: 'attention' }) | webp %}
+            "
+            type="image/webp"
+        />
+        <source
+            media="(max-width: 600px)"
+            srcset="
+                {% getUrl '/assets/images/cta-image.avif' | resize({ width: 1200, height: 772, position: 'attention' }) | jpeg %}
+            "
+            type="image/jpeg"
+        />
+        <!--Tablet and above Image-->
+        <source
+            media="(min-width: 601px)"
+            srcset="
+                {% getUrl '/assets/images/cta-image.avif' | resize({ width: 2500, height: 1667, position: 'attention' }) | avif %}
+            "
+            type="image/avif"
         />
         <source
             media="(min-width: 601px)"
-            srcset="/assets/images/cabinets2.jpg"
+            srcset="
+                {% getUrl '/assets/images/cta-image.avif' | resize({ width: 2500, height: 1667, position: 'attention' }) | webp %}
+            "
+            type="image/webp"
+        />
+        <source
+            media="(min-width: 601px)"
+            srcset="
+                {% getUrl '/assets/images/cta-image.avif' | resize({ width: 2500, height: 1667, position: 'attention' }) | jpeg %}
+            "
+            type="image/jpeg"
         />
         <img
             aria-hidden="true"
             decoding="async"
-            src="/assets/images/cabinets2.jpg"
-            alt="kitchen cabinets"
+            src="/assets/images/cta-image.avif"
+            alt="rv parked by the beach"
             loading="lazy"
             width="2500"
             height="1667"
