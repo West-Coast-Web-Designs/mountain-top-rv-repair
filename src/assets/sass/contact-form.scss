@@ -105,6 +105,38 @@
             font-family: inherit;
         }
 
+        input[type="file"] {
+            display: none;
+        }
+
+        .cs-file-upload {
+            font-size: calc(16 / 16 * 1rem);
+            width: 100%;
+            line-height: calc(36 / 16 * 1rem);
+            padding: 0 calc(48 / 16 * 1rem);
+            display: inline-block;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            border-radius: var(--borderRoundedSm);
+            background-color: #fff;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--primary);
+                color: #fff;
+            }
+        }
+
+        .cs-file-upload-help-text {
+            font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+            color: var(--gray);
+            margin-top: calc(4 / 16 * 1rem);
+            width: 100%;
+            text-align: right;
+        }
+
         .cs-submit {
             border: none;
         }
@@ -345,8 +377,7 @@
 
         .cs-services,
         .cs-date,
-        .cs-time,
-        .cs-phone {
+        .cs-time {
             width: 47%;
         }
 
@@ -409,6 +440,17 @@
                 &::placeholder {
                     color: #fff;
                     opacity: 0.5;
+                }
+            }
+
+            .cs-file-upload {
+                background-color: #4f4f4f;
+                border-color: var(--secondary);
+                color: var(--white);
+
+                &:hover {
+                    background-color: var(--secondary);
+                    color: #000;
                 }
             }
         }

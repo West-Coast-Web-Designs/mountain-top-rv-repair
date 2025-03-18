@@ -94,6 +94,34 @@
     margin-bottom: 0.75rem;
     font-family: inherit;
   }
+  #contact-2320 input[type=file] {
+    display: none;
+  }
+  #contact-2320 .cs-file-upload {
+    font-size: 1rem;
+    width: 100%;
+    line-height: 2.25rem;
+    padding: 0 3rem;
+    display: inline-block;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: var(--borderRoundedSm);
+    background-color: #fff;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  #contact-2320 .cs-file-upload:hover {
+    background-color: var(--primary);
+    color: #fff;
+  }
+  #contact-2320 .cs-file-upload-help-text {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    color: var(--gray);
+    margin-top: 0.25rem;
+    width: 100%;
+    text-align: right;
+  }
   #contact-2320 .cs-submit {
     border: none;
   }
@@ -292,8 +320,7 @@
   }
   #contact-2320 .cs-services,
   #contact-2320 .cs-date,
-  #contact-2320 .cs-time,
-  #contact-2320 .cs-phone {
+  #contact-2320 .cs-time {
     width: 47%;
   }
   #contact-2320 .cs-button-solid {
@@ -344,6 +371,15 @@
   body.dark-mode #contact-2320 .cs-input::placeholder {
     color: #fff;
     opacity: 0.5;
+  }
+  body.dark-mode #contact-2320 .cs-file-upload {
+    background-color: #4f4f4f;
+    border-color: var(--secondary);
+    color: var(--white);
+  }
+  body.dark-mode #contact-2320 .cs-file-upload:hover {
+    background-color: var(--secondary);
+    color: #000;
   }
 }
 

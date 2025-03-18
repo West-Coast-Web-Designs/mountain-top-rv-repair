@@ -44,19 +44,7 @@
                         placeholder="Phone"
                     />
                 </label>
-                <label class="cs-label cs-services">
-                    Services
-                    <select class="cs-input" name="Services">
-                        <option value="" disabled selected>
-                            Select a Service
-                        </option>
-                        <option value="New Construction">
-                            New Construction
-                        </option>
-                        <option value="Remodels">Remodels</option>
-                        <option value="Cabinets">Cabinets</option>
-                    </select>
-                </label>
+
                 <label class="cs-label cs-date">
                     Date
                     <input class="cs-input" required type="date" name="date" />
@@ -68,6 +56,30 @@
                         <option value="afternoon">Afternoon</option>
                         <option value="anytime">Anytime</option>
                     </select>
+                </label>
+                <label class="cs-label">
+                    Image
+
+                    <input
+                        type="file"
+                        id="file-upload"
+                        name="RV Image"
+                        placeholder="RV Image"
+                    />
+                    <div
+                        class="cs-file-upload"
+                        tabindex="0"
+                        role="button"
+                        aria-haspopup="true"
+                    >
+                        Upload Image
+                    </div>
+                    <div
+                        class="cs-file-upload-help-text"
+                        id="file-input-help-text"
+                    >
+                        Choose a file (Max 15MB)
+                    </div>
                 </label>
                 <label class="cs-label">
                     Message
@@ -158,7 +170,7 @@
                     />
                 </picture>
                 <div class="cs-flex-group">
-                    <span class="cs-header">Current Service Area</span>
+                    <span class="cs-header">Service Area</span>
                     <span
                         >{{ client.location.city }}, {{ client.location.state }}
                         and surrounding areas</span
