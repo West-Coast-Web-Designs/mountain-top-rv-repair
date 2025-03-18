@@ -5,6 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #contact-2320 {
+        background-color: var(--lighter);
         padding: var(--sectionPadding);
         display: flex;
         flex-direction: column;
@@ -42,6 +43,7 @@
 
         .cs-content {
             text-align: left;
+            width: 100%;
         }
 
         .cs-title {
@@ -49,7 +51,16 @@
         }
 
         .cs-form {
-            border-radius: calc(16 / 16 * 1rem);
+            width: 100%;
+            // max-width: calc(630 / 16 * 1rem);
+            /* 24px - 48px top and bottom */
+            /* 16px - 48px left and right */
+            padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
+            /* prevents flexbox from affecting height and width */
+            box-sizing: border-box;
+            background-color: var(--white);
+            border-radius: var(--borderRounded);
+            box-shadow: var(--shadow);
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -105,28 +116,117 @@
             }
         }
 
+        .cs-contact-container {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--borderRounded);
+            box-shadow: var(--shadow);
+            width: 100%;
+            margin: auto;
+            /* changes to 1280px at desktop */
+            max-width: calc(580 / 16 * 1rem);
+        }
+
+        .cs-h3 {
+            /* 20px - 39px */
+            font-size: clamp(1.25rem, 3vw, 2.4375rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0 0 calc(4 / 16 * 1rem) 0;
+            color: var(--bigTextColor);
+        }
+
+        .cs-ul {
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            // padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: calc(24 / 16 * 1rem);
+
+            position: relative;
+        }
+
+        .cs-li {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: calc(20 / 16 * 1rem);
+
+            &:hover {
+                .cs-icon-wrapper {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .cs-link {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            text-decoration: none;
+            color: var(--primary);
+            display: block;
+            position: relative;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .cs-icon-wrapper {
+            width: calc(60 / 16 * 1rem);
+            height: calc(60 / 16 * 1rem);
+            margin: 0;
+            border-radius: 50%;
+            border: 1px solid #bababa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            transition: transform 0.3s;
+        }
+
+        .cs-icon {
+            width: calc(24 / 16 * 1rem);
+            height: auto;
+            display: block;
+        }
+
+        .cs-flex-group {
+            display: flex;
+            flex-direction: column;
+        }
+
         .cs-map {
             width: 100%;
             max-width: calc(630 / 16 * 1rem);
             height: calc(400 / 16 * 1rem);
             position: relative;
             z-index: 1;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .cs-iframe-wrapper {
             width: 100%;
-            position: absolute;
+            position: relative;
             top: 0;
             left: 0;
             /* 40px - 56px */
             bottom: clamp(2.5rem, 5vw, 3.5rem);
 
             iframe {
-                position: absolute;
+                // position: absolute;
                 top: 0;
                 left: 0;
-                height: 100%;
+                // height: 100%;
                 width: 100%;
                 object-fit: cover;
             }
@@ -243,6 +343,15 @@
     }
 }
 
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+    #contact-2320 {
+        .cs-ul {
+            justify-content: space-around;
+        }
+    }
+}
+
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #contact-2320 {
@@ -250,18 +359,24 @@
             max-width: calc(1280 / 16 * 1rem);
             flex-direction: row;
             justify-content: space-between;
-            align-items: stretch;
-            gap: calc(52 / 16 * 1rem);
+            // align-items: stretch;
+            // gap: calc(52 / 16 * 1rem);
         }
 
-        .cs-container2 {
+        .cs-contact-container {
             max-width: calc(1280 / 16 * 1rem);
         }
 
         .cs-content {
-            max-width: calc(522 / 16 * 1rem);
+            // max-width: calc(522 / 16 * 1rem);
+            width: 46%;
             /* 24px - 80px */
-            padding: clamp(2rem, 5vw, 5rem) 0;
+            // padding: clamp(2rem, 5vw, 5rem) 0;
+        }
+
+        .cs-form {
+            // width: 46%;
+            // max-width: calc(578 / 16 * 1rem);
         }
 
         .cs-title,
