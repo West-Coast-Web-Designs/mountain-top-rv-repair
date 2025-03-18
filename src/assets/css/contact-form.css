@@ -77,6 +77,7 @@
     height: 3.5rem;
     padding: 0;
     padding-left: 1.5rem;
+    border-radius: var(--borderRoundedSm);
     color: var(--headerColor);
     background-color: #f7f7f7;
     border: none;
@@ -94,15 +95,7 @@
     font-family: inherit;
   }
   #contact-2320 .cs-submit {
-    text-transform: uppercase;
-    background-color: var(--secondaryLight);
-    color: var(--headerColor);
     border: none;
-    transition: color 0.3s;
-  }
-  #contact-2320 .cs-submit:hover {
-    cursor: pointer;
-    color: #fff;
   }
   #contact-2320 .cs-contact-container {
     background-color: var(--white);
@@ -343,6 +336,9 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #contact-2320 {
+    background-color: var(--dark);
+  }
   body.dark-mode #contact-2320 .cs-title,
   body.dark-mode #contact-2320 .cs-header,
   body.dark-mode #contact-2320 .cs-address {
@@ -355,11 +351,23 @@
     background-color: #000;
     opacity: 0.4;
   }
+  body.dark-mode #contact-2320 .cs-form {
+    background-color: var(--accent);
+  }
+  body.dark-mode #contact-2320 .cs-contact-container {
+    background-color: var(--accent);
+  }
   body.dark-mode #contact-2320 .cs-label {
     color: var(--bodyTextColorWhite);
   }
+  body.dark-mode #contact-2320 .cs-icon-wrapper img {
+    filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #contact-2320 .cs-link {
+    color: var(--tertiary);
+  }
   body.dark-mode #contact-2320 .cs-input {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #4f4f4f;
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #contact-2320 .cs-input::placeholder {

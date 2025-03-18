@@ -86,6 +86,7 @@
             height: calc(56 / 16 * 1rem);
             padding: 0;
             padding-left: calc(24 / 16 * 1rem);
+            border-radius: var(--borderRoundedSm);
             color: var(--headerColor);
             background-color: #f7f7f7;
             border: none;
@@ -105,15 +106,7 @@
         }
 
         .cs-submit {
-            text-transform: uppercase;
-            background-color: var(--secondaryLight);
-            color: var(--headerColor);
             border: none;
-            transition: color 0.3s;
-            &:hover {
-                cursor: pointer;
-                color: #fff;
-            }
         }
 
         .cs-contact-container {
@@ -374,11 +367,6 @@
             // padding: clamp(2rem, 5vw, 5rem) 0;
         }
 
-        .cs-form {
-            // width: 46%;
-            // max-width: calc(578 / 16 * 1rem);
-        }
-
         .cs-title,
         .cs-text {
             text-align: left;
@@ -410,6 +398,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #contact-2320 {
+            background-color: var(--dark);
             .cs-title,
             .cs-header,
             .cs-address {
@@ -424,12 +413,30 @@
                 }
             }
 
+            .cs-form {
+                background-color: var(--accent);
+            }
+
+            .cs-contact-container {
+                background-color: var(--accent);
+            }
+
             .cs-label {
                 color: var(--bodyTextColorWhite);
             }
 
+            .cs-icon-wrapper {
+                img {
+                    filter: grayscale(1) brightness(1000%);
+                }
+            }
+
+            .cs-link {
+                color: var(--tertiary);
+            }
+
             .cs-input {
-                background-color: rgba(255, 255, 255, 0.05);
+                background-color: #4f4f4f;
                 color: var(--bodyTextColorWhite);
                 &::placeholder {
                     color: #fff;
