@@ -1303,6 +1303,8 @@
         align-items: center;
         min-height: 30vh;
         padding-top: calc(50 / 16 * 1rem);
+        // height of fixed navigation
+        margin-top: 86px;
 
         picture {
             z-index: -2;
