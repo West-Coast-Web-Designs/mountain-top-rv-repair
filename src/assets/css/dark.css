@@ -34,6 +34,7 @@
   }
   body.dark-mode .cs-button-solid {
     background-color: var(--tertiary);
+    color: var(--grayDark);
   }
   body.dark-mode .cs-button-solid:hover {
     background-color: var(--tertiaryDark);
