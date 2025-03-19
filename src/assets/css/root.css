@@ -398,32 +398,21 @@
   }
   #cs-navigation .cs-logo {
     width: auto;
-    height: 2.5rem;
+    height: 4.5rem;
     margin: 0 auto 0 0;
-    /* prevents padding from affecting height and width */
+    /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    order: 1;
     z-index: 10;
   }
   #cs-navigation .cs-logo img {
-    width: auto;
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
-  }
-  #cs-navigation .cs-logo-text {
-    font-size: 1.125rem;
-    line-height: 1em;
-    font-weight: 700;
-    color: var(--headerColor);
-    display: flex;
-    text-decoration: none;
-    justify-content: start;
-    width: 100%;
+    border-radius: var(--borderRounded);
   }
   #cs-navigation .cs-nav {
     order: 2;
@@ -596,6 +585,25 @@
   #cs-navigation .cs-top-link:nth-of-type(2) {
     display: flex;
   }
+  #cs-navigation .cs-logo {
+    width: auto;
+    max-width: 12.3125rem;
+    height: 4.5rem;
+    /* margin-right auto pushes everything away from it to the right */
+    margin: 0 auto 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  #cs-navigation .cs-logo img {
+    width: 100%;
+    height: 100%;
+    /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+    object-fit: contain;
+    border-radius: var(--borderRounded);
+  }
 }
 /* Dark Mode */
 @media only screen and (max-width: 1023px) {
@@ -604,7 +612,6 @@
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it white */
-    filter: grayscale(1) brightness(1000%);
   }
   body.dark-mode #cs-navigation .cs-top-container {
     background-color: rgba(0, 0, 0, 0.2);
@@ -931,8 +938,9 @@
     display: none;
   }
   #cs-navigation .cs-logo {
-    /* 40px - 44px */
-    height: clamp(2.5rem, 4vw, 2.75rem);
+    width: auto;
+    max-width: 12.3125rem;
+    height: 4.5rem;
     /* margin-right auto pushes everything away from it to the right */
     margin: 0 auto 0 0;
     padding: 0;
@@ -942,17 +950,11 @@
     z-index: 100;
   }
   #cs-navigation .cs-logo img {
-    width: auto;
+    width: 100%;
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
-  }
-  #cs-navigation .cs-logo-text {
-    font-size: 2rem;
-    line-height: 1em;
-    font-weight: 700;
-    color: var(--headerColor);
-    text-decoration: none;
+    border-radius: var(--borderRounded);
   }
   #cs-navigation .cs-ul {
     width: 100%;
@@ -1017,7 +1019,6 @@
   body.dark-mode #cs-navigation .cs-logo,
   body.dark-mode #cs-navigation .cs-link-icon {
     /* turns it white */
-    filter: grayscale(1) brightness(1000%);
   }
 }
 /*-- -------------------------- -->
@@ -1263,21 +1264,12 @@
   #cs-footer-840 .cs-logo-img {
     width: 100%;
     height: auto;
+    border-radius: var(--borderRounded);
   }
   #cs-footer-840 .cs-text {
     color: var(--bodyTextColorWhite);
     opacity: 0.8;
     margin: 0 0 2rem;
-  }
-  #cs-footer-840 .cs-logo-text {
-    font-size: 1.5rem;
-    line-height: 1.5em;
-    font-weight: 700;
-    color: var(--bodyTextColorWhite);
-    display: block;
-    position: relative;
-    text-decoration: none;
-    width: 100%;
   }
   #cs-footer-840 .cs-social {
     display: inline-flex;
