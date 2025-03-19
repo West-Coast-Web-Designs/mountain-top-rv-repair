@@ -372,6 +372,9 @@
     color: #fff;
     opacity: 0.5;
   }
+  body.dark-mode #contact-2320 .cs-file-upload-help-text {
+    color: var(--bodyTextColorWhite);
+  }
   body.dark-mode #contact-2320 .cs-file-upload {
     background-color: #4f4f4f;
     border-color: var(--secondary);
