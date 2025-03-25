@@ -604,6 +604,7 @@
                 height: 100%;
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
+                border-radius: var(--borderRounded);
             }
         }
 
@@ -855,6 +856,7 @@
                 height: 100%;
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
+                border-radius: var(--borderRounded);
             }
         }
     }
@@ -865,11 +867,6 @@
     body.dark-mode {
         #cs-navigation {
             background-color: var(--dark);
-
-            .cs-logo {
-                /* makes it white */
-                // filter: grayscale(1) brightness(1000%);
-            }
 
             .cs-top-container {
                 background-color: rgba(0, 0, 0, 0.2);

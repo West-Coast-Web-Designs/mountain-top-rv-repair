@@ -483,6 +483,7 @@
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
+    border-radius: var(--borderRounded);
   }
   #cs-navigation .cs-logo-text {
     font-size: 1.125rem;
@@ -682,15 +683,13 @@
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
+    border-radius: var(--borderRounded);
   }
 }
 /* Dark Mode */
 @media only screen and (max-width: 1023px) {
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
-  }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* makes it white */
   }
   body.dark-mode #cs-navigation .cs-top-container {
     background-color: rgba(0, 0, 0, 0.2);
