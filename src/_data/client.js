@@ -1,8 +1,8 @@
 module.exports = {
     name: "Mountain Top Mobile RV Repair",
     email: "mtmrvr@gmail.com",
-    phoneForTel: "503-593-6530",
-    phoneFormatted: "(503) 593-6530",
+    phoneForTel: "503-953-6530",
+    phoneFormatted: "(503) 953-6530",
     location: {
         city: "Portland",
         state: "Oregon",
@@ -12,5 +12,5 @@ module.exports = {
         instagram: "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    domain: "https://www.example.com",
+    domain: "https://mtmrvr.com",
 };
