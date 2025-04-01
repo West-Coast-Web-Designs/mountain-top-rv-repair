@@ -13,7 +13,13 @@
                 id="cs-form-323-2320"
                 name="Contact Form"
                 method="post"
+                netlify
+                netlify-honeypot="bot-field"
             >
+                <label class="hidden">
+                    Don’t fill this out if you’re human:
+                    <input name="bot-field" />
+                </label>
                 <label class="cs-label">
                     Name
                     <input
