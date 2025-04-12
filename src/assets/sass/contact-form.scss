@@ -441,6 +441,14 @@
                     color: #fff;
                     opacity: 0.5;
                 }
+
+                & input[type="date"] {
+                    width: 100%;
+                    min-width: 100%;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    box-sizing: border-box;
+                }
             }
 
             .cs-file-upload-help-text {

@@ -372,6 +372,13 @@
     color: #fff;
     opacity: 0.5;
   }
+  body.dark-mode #contact-2320 .cs-input input[type=date] {
+    width: 100%;
+    min-width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+  }
   body.dark-mode #contact-2320 .cs-file-upload-help-text {
     color: var(--bodyTextColorWhite);
   }
